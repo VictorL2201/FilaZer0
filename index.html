@@ -6,6 +6,18 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>FilaZero UI/UX Design</title>
       <style>html, body { height: 100%; margin: 0; } #root { height: 100%; }</style>
+      <script>
+  (function() {
+    var p = window.location.search.match(/[?&]p=([^&]*)/);
+    if (p) {
+      window.history.replaceState(null, null,
+        decodeURIComponent(p[1]) +
+        (window.location.search.match(/[?&]q=([^&]*)/) ? '?' + decodeURIComponent(window.location.search.match(/[?&]q=([^&]*)/)[1]) : '') +
+        (window.location.search.match(/[?&]h=([^&]*)/) ? '#' + decodeURIComponent(window.location.search.match(/[?&]h=([^&]*)/)[1]) : '')
+      );
+    }
+  })();
+      </script>
       <script type="module" crossorigin src="/FilaZer0/assets/index-BX9-7s_p.js"></script>
       <link rel="stylesheet" crossorigin href="/FilaZer0/assets/index-C_Wdidzr.css">
     </head>
