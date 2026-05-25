@@ -150,7 +150,7 @@ export default function EstoquePage() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-muted-foreground">Valor Total</p>
-                <h3 className="text-2xl font-bold mt-1">R$ 15.8k</h3>
+                <h3 className="text-2xl font-bold mt-1">R$ 100k</h3>
               </div>
               <div className="bg-[#DC143C]/10 text-[#DC143C] p-3 rounded-xl">
                 <ArrowUpDown className="w-5 h-5" />

@@ -31,13 +31,36 @@ export default function Layout() {
   return (
     <div className="min-h-screen bg-background">
       {/* Sidebar */}
-      <aside className="fixed left-0 top-0 h-screen w-64 bg-card border-r border-border flex flex-col">
+      <aside className="
+        group
+        w-[90px]
+        hover:w-[260px]
+        trasition-all
+        duration-300
+        border-r
+        border-border
+        px-4
+        py-6
+        overflow-hidden
+      ">
         {/* Logo */}
         <div className="p-6 border-b border-border">
           <div className="flex items-center gap-2">
             <FilaZeroLogo variant="icon" style={{ height: "40px" }} />
             <div>
-              <p className="text-xs text-muted-foreground">Gestão Inteligente</p>
+              <p
+        className="
+          text-xl
+          text-foreground
+          opacity-0
+          group-hover:opacity-100
+          transition-all
+          duration-300
+          whitespace-nowrap
+  "
+>
+  Gestão Inteligente
+</p>
             </div>
           </div>
         </div>
@@ -53,12 +76,25 @@ export default function Layout() {
               <Link key={item.path} to={item.path}>
                 <Button
                   variant={isActive ? "secondary" : "ghost"}
-                  className={`w-full justify-start ${
+                  className={`group w-full justify-start ${
                     isActive ? "bg-primary/10 text-primary" : ""
                   }`}
                 >
                   <Icon className="mr-3 h-5 w-5" />
-                  {item.label}
+                  <span
+  className="
+    opacity-0
+    w-0
+    overflow-hidden
+    group-hover:w-auto
+    group-hover:opacity-100
+    transition-all
+    duration-300
+    whitespace-nowrap
+  "
+>
+                    {item.label}
+                  </span>
                 </Button>
               </Link>
             );
